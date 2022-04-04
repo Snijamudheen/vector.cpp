@@ -6,28 +6,28 @@ using namespace std;
 int main()
 {
     vector<int> hours;
-    vector<double>payrate;
+    vector<double> payrate;
     int numemp;
     int index = 0;
 
     cout << "How many employees do you have?" << endl;
-    cin>>numemp;
+    cin >> numemp;
 
-    for(index = 0; index<numemp;index++){
+    for(index = 0; index < numemp; index++){
         int temphours;
         int temprate;
 
-        cout<<"hours worked by employee #"<< (index+1)<<":";
-        cin>>temphours;
+        cout << "hours worked by employee #" << (index+1) << ":";
+        cin >> temphours;
         hours.push_back(temphours);
-        cout<<"hourly payrates for employee #"<< (index+1)<<":";
-        cin>>temprate;
+        cout << "hourly payrates for employee #" << (index+1) << ":";
+        cin >> temprate;
         payrate.push_back(temprate);
     }
 
-    for(index = 0; index < numemp;index++){
+    for(index = 0; index < numemp; index++){
             double grosspay = hours[index] * payrate[index];
-            cout<<"grosspay for employee #"<< (index+1)<<":"<<grosspay<<endl;
+            cout << "grosspay for employee #" << (index+1) << ":" << grosspay << endl;
     }
     return 0;
 }
